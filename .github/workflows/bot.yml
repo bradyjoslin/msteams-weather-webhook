@@ -12,5 +12,5 @@ jobs:
     steps:
     - name: Run a multi-line script
       run: |
-        WTTR="$(curl -s 'https://wttr.in?format=%l:+%c+%t')"
+        WTTR=$(curl -s "https://wttr.in?format=%l:+%c+%t")
         curl -H 'Content-Type: application/json' -d '{"text": "'"Good morning from GitHub Actions.\n\n$WTTR\n\nHave a great day."'"}' {{ secrets.WEBHOOK_URL }}
