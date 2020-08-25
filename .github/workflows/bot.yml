@@ -1,8 +1,6 @@
 name: WeatherBot
 
-on:
-  schedule:
-    - cron: '0 14 * * *'
+on: workflow_dispatch
 
 jobs:
   bot:
